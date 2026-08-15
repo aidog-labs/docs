@@ -4,7 +4,7 @@ import { defineConfig } from 'astro/config'
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://aidog-labs.github.io/',
+  site: 'https://aidog-labs.github.io',
   base: '/docs',
   integrations: [
     starlight({
