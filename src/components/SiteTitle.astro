@@ -1,0 +1,38 @@
+---
+const { siteTitleHref } = Astro.locals.starlightRoute
+---
+
+<a href={siteTitleHref} class="site-title sl-flex">
+  <img src="/favicon.png" alt="AIDOG" width="32" height="32" />
+  <span translate="no">
+    AIDOG<span class="tld">.XYZ</span>
+  </span>
+</a>
+
+<style>
+  .site-title {
+    align-items: center;
+    gap: 0.75rem;
+    color: var(--sl-color-white);
+    text-decoration: none;
+    white-space: nowrap;
+  }
+  img {
+    width: 32px;
+    height: 32px;
+    border-radius: 5px;
+    object-fit: cover;
+  }
+  span {
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    font-style: italic;
+    letter-spacing: -0.05em;
+  }
+  .tld {
+    color: #00e5c0;
+  }
+  :global([data-theme='light']) .tld {
+    color: #007a68;
+  }
+</style>

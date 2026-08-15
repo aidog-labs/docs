@@ -1,0 +1,28 @@
+---
+import Default from '@astrojs/starlight/components/SocialIcons.astro'
+
+const appUrl = 'https:/aidog.xyz'
+const buyTokenUrl = 'https:/aidog.xyz/token'
+---
+
+<a href={appUrl} target="_blank" rel="noopener noreferrer">
+  Enter App
+</a>
+<a href={buyTokenUrl} target="_blank" rel="noopener noreferrer">
+  Buy Token
+</a>
+<Default><slot /></Default>
+
+<style>
+  a {
+    color: var(--sl-color-text);
+    text-decoration: none;
+    font-size: var(--sl-text-sm);
+    font-weight: 600;
+    margin-inline-end: 1rem;
+    white-space: nowrap;
+  }
+  a:hover {
+    color: var(--sl-color-text-accent);
+  }
+</style>

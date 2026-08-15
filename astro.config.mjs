@@ -6,20 +6,21 @@ import { defineConfig } from 'astro/config'
 export default defineConfig({
   integrations: [
     starlight({
-      title: 'My Docs',
-      social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/withastro/starlight' }],
+      title: 'AIDOG',
+      favicon: '/favicon.png',
+      social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/aidog-labs/docs' }],
+      components: {
+        SiteTitle: './src/components/SiteTitle.astro',
+        SocialIcons: './src/components/HeaderLinks.astro',
+      },
       sidebar: [
-        {
-          label: 'Guides',
-          items: [
-            // Each item here is one entry in the navigation menu.
-            { label: 'Example Guide', slug: 'guides/example' },
-          ],
-        },
-        {
-          label: 'Reference',
-          items: [{ autogenerate: { directory: 'reference' } }],
-        },
+        { slug: 'introduction' },
+        { slug: 'getting-started' },
+        { slug: 'products' },
+        { slug: 'token' },
+        { slug: 'nft' },
+        { slug: 'protocol' },
+        { slug: 'security' },
       ],
     }),
   ],
