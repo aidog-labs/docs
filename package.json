@@ -2,6 +2,10 @@
   "name": "aidog-docs",
   "type": "module",
   "version": "0.0.1",
+  "packageManager": "pnpm@11.21.0",
+  "engines": {
+    "node": ">=22.0.0"
+  },
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
