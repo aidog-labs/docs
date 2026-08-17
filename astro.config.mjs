@@ -16,13 +16,34 @@ export default defineConfig({
         SocialIcons: './src/components/HeaderLinks.astro',
       },
       sidebar: [
-        { slug: 'introduction' },
-        { slug: 'getting-started' },
-        { slug: 'products' },
-        { slug: 'token' },
-        { slug: 'nft' },
-        { slug: 'protocol' },
-        { slug: 'security' },
+        {
+          label: 'Introduction',
+          items: [{ autogenerate: { directory: 'introduction' } }],
+        },
+        {
+          label: 'Getting Started',
+          items: [{ autogenerate: { directory: 'getting-started' } }],
+        },
+        {
+          label: 'Core Products',
+          items: [{ autogenerate: { directory: 'products' } }],
+        },
+        {
+          label: '$AIDOG Token',
+          items: [{ autogenerate: { directory: 'token' } }],
+        },
+        {
+          label: 'NFT',
+          items: [{ autogenerate: { directory: 'nft' } }],
+        },
+        {
+          label: 'Protocol Mechanics',
+          items: [{ autogenerate: { directory: 'protocol' } }],
+        },
+        {
+          label: 'Security & Risks',
+          items: [{ autogenerate: { directory: 'security' } }],
+        },
       ],
     }),
   ],
