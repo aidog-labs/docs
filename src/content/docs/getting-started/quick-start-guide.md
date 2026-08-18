@@ -1,6 +1,8 @@
 ---
 title: Quick Start Guide
 description: Connect, acquire $AIDOG or USDC, and explore AIDOG products.
+template: doc
+draft: false
 sidebar:
   order: 4
 ---

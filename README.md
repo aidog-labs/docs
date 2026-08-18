@@ -17,19 +17,29 @@ All commands are run from the root of the project:
 | `pnpm astro ...` | Run CLI commands such as `astro add` or `astro check` |
 | `pnpm lint`      | Lint the project                                      |
 | `pnpm lint:fix`  | Lint and auto-fix                                     |
+| `pnpm test`      | Run sidebar validation checks                         |
+| `pnpm cms`       | Start Decap local backend (`localhost:8081`)          |
 
 ## Project structure
 
 ```
 .
 ├── public/
+│   ├── admin/
+│   └── docs-media/
 ├── src/
-│   ├── content/
-│   │   └── docs/
+│   ├── content/docs/
+│   ├── data/sidebar.yaml
 │   └── content.config.ts
 ├── astro.config.mjs
 ├── package.json
 └── tsconfig.json
 ```
 
-Markdown and MDX files in `src/content/docs/` become pages. Sidebar order is configured in `astro.config.mjs`.
+Markdown files in `src/content/docs/` become pages. Sidebar groups live in `src/data/sidebar.yaml`; page order is `sidebar.order` in each file.
+
+## CMS
+
+Local: run `pnpm cms` and `pnpm dev`, then open `http://localhost:4321/docs/admin/`.
+
+Production: `https://aidog-labs.github.io/docs/admin/` (GitHub org members with write access). OAuth callback host is `https://aidog.xyz/cms/oauth/callback`.

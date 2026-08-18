@@ -1,6 +1,8 @@
 ---
 title: Fees Overview
 description: YieldMax, StrategyHub, House Pool, and other product-specific fees.
+template: doc
+draft: false
 sidebar:
   order: 4
 ---

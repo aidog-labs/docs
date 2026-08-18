@@ -1,6 +1,8 @@
 ---
 title: Key Features
 description: Creators manage portfolios; followers deposit USDC and pay Carry only on profit.
+template: doc
+draft: false
 sidebar:
   order: 2
 ---

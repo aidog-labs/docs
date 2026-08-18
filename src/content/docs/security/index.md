@@ -1,6 +1,8 @@
 ---
 title: Overview
 description: Audits and risks of using AIDOG.
+template: doc
+draft: false
 sidebar:
   order: 1
 ---

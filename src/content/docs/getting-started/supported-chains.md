@@ -1,6 +1,8 @@
 ---
 title: Supported Chains
 description: AIDOG runs on Base, with Stocks on BNB Chain.
+template: doc
+draft: false
 sidebar:
   order: 3
 ---

@@ -1,6 +1,8 @@
 ---
 title: YieldMax
 description: An intelligent yield aggregator that auto-allocates USDC or ETH across lending pools.
+template: doc
+draft: false
 sidebar:
   order: 3
 ---

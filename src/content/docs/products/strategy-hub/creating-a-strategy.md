@@ -1,6 +1,8 @@
 ---
 title: Creating a Strategy
 description: Minimum 10,000 USDC, at least 1 AIDOG NFT, and a creator-set Carry Fee.
+template: doc
+draft: false
 sidebar:
   order: 3
 ---

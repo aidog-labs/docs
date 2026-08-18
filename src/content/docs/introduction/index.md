@@ -1,6 +1,8 @@
 ---
 title: Overview
 description: What AIDOG is and the vision behind the on-chain private bank.
+template: doc
+draft: false
 sidebar:
   order: 1
 ---

@@ -1,6 +1,8 @@
 ---
 title: Maintenance Requirements
 description: Each NFT needs a minimum $AIDOG balance or House Pool stake to stay active.
+template: doc
+draft: false
 sidebar:
   order: 4
 ---

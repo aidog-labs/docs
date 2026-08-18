@@ -1,6 +1,10 @@
 // @ts-check
+import { fileURLToPath } from 'node:url'
 import starlight from '@astrojs/starlight'
 import { defineConfig } from 'astro/config'
+import { loadStarlightSidebar } from './src/sidebar.mjs'
+
+const rootDir = fileURLToPath(new URL('.', import.meta.url))
 
 // https://astro.build/config
 export default defineConfig({
@@ -15,36 +19,7 @@ export default defineConfig({
         SiteTitle: './src/components/SiteTitle.astro',
         SocialIcons: './src/components/HeaderLinks.astro',
       },
-      sidebar: [
-        {
-          label: 'Introduction',
-          items: [{ autogenerate: { directory: 'introduction' } }],
-        },
-        {
-          label: 'Getting Started',
-          items: [{ autogenerate: { directory: 'getting-started' } }],
-        },
-        {
-          label: 'Core Products',
-          items: [{ autogenerate: { directory: 'products' } }],
-        },
-        {
-          label: '$AIDOG Token',
-          items: [{ autogenerate: { directory: 'token' } }],
-        },
-        {
-          label: 'NFT',
-          items: [{ autogenerate: { directory: 'nft' } }],
-        },
-        {
-          label: 'Protocol Mechanics',
-          items: [{ autogenerate: { directory: 'protocol' } }],
-        },
-        {
-          label: 'Security & Risks',
-          items: [{ autogenerate: { directory: 'security' } }],
-        },
-      ],
+      sidebar: loadStarlightSidebar(rootDir),
     }),
   ],
 })

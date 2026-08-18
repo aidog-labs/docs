@@ -1,6 +1,8 @@
 ---
 title: Overview
 description: Create or follow discretionary crypto investment strategies.
+template: doc
+draft: false
 sidebar:
   order: 1
 ---

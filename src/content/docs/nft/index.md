@@ -1,6 +1,8 @@
 ---
 title: Overview
 description: AIDOG NFT supply, generation, utility, maintenance, and House Pool boosts.
+template: doc
+draft: false
 sidebar:
   order: 1
 ---

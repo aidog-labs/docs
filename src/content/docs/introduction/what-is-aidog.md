@@ -1,6 +1,8 @@
 ---
 title: What is AIDOG
 description: AIDOG is an on-chain private banking system designed to lower the barriers to advanced financial strategies.
+template: doc
+draft: false
 sidebar:
   order: 2
 ---

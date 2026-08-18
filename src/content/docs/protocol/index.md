@@ -1,6 +1,8 @@
 ---
 title: Overview
 description: Revenue distribution, the Buyback Fund, and protocol fees.
+template: doc
+draft: false
 sidebar:
   order: 1
 ---

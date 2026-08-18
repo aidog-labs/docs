@@ -1,6 +1,8 @@
 ---
 title: How to Mint / Generate
 description: NFTs are generated when net $AIDOG accumulation via Uniswap V4 Hooks crosses every 100,000 threshold.
+template: doc
+draft: false
 sidebar:
   order: 2
 ---

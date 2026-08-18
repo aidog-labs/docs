@@ -1,6 +1,8 @@
 ---
 title: House Pool
 description: Stake $AIDOG to receive a share of protocol revenue.
+template: doc
+draft: false
 sidebar:
   order: 7
 ---

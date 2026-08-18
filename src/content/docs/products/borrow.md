@@ -1,6 +1,8 @@
 ---
 title: Borrow
 description: Borrow USDC against YieldMax or StrategyHub positions.
+template: doc
+draft: false
 sidebar:
   order: 4
 ---

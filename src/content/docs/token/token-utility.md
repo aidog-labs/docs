@@ -1,6 +1,8 @@
 ---
 title: Token Utility
 description: Stake, collateral, NFT maintenance, and future governance with $AIDOG.
+template: doc
+draft: false
 sidebar:
   order: 2
 ---

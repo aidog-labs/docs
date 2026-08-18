@@ -1,6 +1,8 @@
 ---
 title: Deposit & Withdraw
 description: Deposit USDC for strategy shares; Carry Fee applies only on profitable withdrawals.
+template: doc
+draft: false
 sidebar:
   order: 4
 ---

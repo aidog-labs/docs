@@ -1,6 +1,8 @@
 ---
 title: Utility & Benefits
 description: Required for StrategyHub strategies and House Pool revenue boosts.
+template: doc
+draft: false
 sidebar:
   order: 3
 ---

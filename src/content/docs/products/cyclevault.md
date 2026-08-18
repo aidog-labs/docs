@@ -1,6 +1,8 @@
 ---
 title: CycleVault
 description: An AI-powered vault that allocates between BTC and USDC from Bitcoin cycle signals.
+template: doc
+draft: false
 sidebar:
   order: 6
 ---

@@ -1,6 +1,8 @@
 ---
 title: Overview
 description: StrategyHub, YieldMax, Borrow, Stocks, CycleVault, and House Pool.
+template: doc
+draft: false
 sidebar:
   order: 1
 ---

@@ -1,6 +1,8 @@
 ---
 title: Risk Disclosure
 description: Smart contract, market, liquidation, strategy, and bridge risks of using AIDOG.
+template: doc
+draft: false
 sidebar:
   order: 3
 ---

@@ -1,6 +1,8 @@
 ---
 title: Stocks
 description: On-chain trading of tokenized real-world assets, primarily US equities.
+template: doc
+draft: false
 sidebar:
   order: 5
 ---

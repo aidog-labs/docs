@@ -1,6 +1,8 @@
 ---
 title: Overview
 description: Utility, tokenomics, and how to acquire $AIDOG.
+template: doc
+draft: false
 sidebar:
   order: 1
 ---

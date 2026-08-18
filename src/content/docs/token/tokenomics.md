@@ -1,6 +1,8 @@
 ---
 title: Tokenomics
 description: 1,000,000,000 $AIDOG total supply, fully circulating, with no inflation.
+template: doc
+draft: false
 sidebar:
   order: 3
 ---
