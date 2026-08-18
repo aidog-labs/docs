@@ -2,8 +2,7 @@
 import { fileURLToPath } from 'node:url'
 import { loadCmsConfig } from '../cms-config.mjs'
 
-const rootDir = fileURLToPath(new URL('../..', import.meta.url))
-const cmsConfig = loadCmsConfig(rootDir)
+const cmsConfig = loadCmsConfig(fileURLToPath(new URL('.', import.meta.url)))
 ---
 
 <html lang="en">

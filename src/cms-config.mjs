@@ -1,9 +1,38 @@
 import fs from 'node:fs'
 import path from 'node:path'
+import process from 'node:process'
 import { parse } from 'yaml'
 import { parseSidebarYaml } from './sidebar.mjs'
 
 const DOCS_ROOT = 'src/content/docs'
+const CONFIG_REL = 'public/admin/config.yml'
+const SIDEBAR_REL = 'src/data/sidebar.yaml'
+
+/**
+ * @param {string} dir
+ * @returns {boolean} whether dir is the docs project root
+ */
+function isProjectRoot(dir) {
+  return fs.existsSync(path.join(dir, CONFIG_REL)) && fs.existsSync(path.join(dir, SIDEBAR_REL))
+}
+
+/**
+ * @param {string} [startDir]
+ * @returns {string} project root containing config.yml and sidebar.yaml
+ */
+export function findProjectRoot(startDir = process.cwd()) {
+  let dir = path.resolve(startDir)
+  while (true) {
+    if (isProjectRoot(dir)) {
+      return dir
+    }
+    const parent = path.dirname(dir)
+    if (parent === dir) {
+      throw new Error(`Could not find docs project root from ${startDir}`)
+    }
+    dir = parent
+  }
+}
 
 const DOCS_FIELDS = [
   { label: 'Template', name: 'template', widget: 'hidden', default: 'doc' },
@@ -146,12 +175,13 @@ export function collectionsFromSidebar(rootDir, sections) {
 }
 
 /**
- * @param {string} rootDir
+ * @param {string} [startDir]
  * @returns {Record<string, unknown>} full Decap config with generated docs collections
  */
-export function loadCmsConfig(rootDir) {
-  const yamlPath = path.join(rootDir, 'public/admin/config.yml')
-  const sidebarPath = path.join(rootDir, 'src/data/sidebar.yaml')
+export function loadCmsConfig(startDir = process.cwd()) {
+  const rootDir = findProjectRoot(startDir)
+  const yamlPath = path.join(rootDir, CONFIG_REL)
+  const sidebarPath = path.join(rootDir, SIDEBAR_REL)
   const raw = parse(fs.readFileSync(yamlPath, 'utf8'))
   if (!raw || typeof raw !== 'object' || Array.isArray(raw) || !Array.isArray(raw.collections)) {
     throw new Error('config.yml must be a mapping with a collections list')

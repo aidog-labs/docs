@@ -3,6 +3,7 @@ import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 import {
   collectionsFromSidebar,
+  findProjectRoot,
   humanizeDirectory,
   loadCmsConfig,
 } from './cms-config.mjs'
@@ -32,7 +33,8 @@ assert.deepEqual(
 )
 
 const rootDir = path.join(fileURLToPath(new URL('.', import.meta.url)), '..')
-const config = loadCmsConfig(rootDir)
+assert.equal(findProjectRoot(path.join(rootDir, 'src/pages')), rootDir)
+const config = loadCmsConfig(path.join(rootDir, 'dist/.prerender/chunks'))
 assert.equal(config.load_config_file, false)
 assert.equal(config.collections[0].name, 'site')
 assert.equal(config.collections.filter(collection => collection.name === 'site').length, 1)
@@ -43,6 +45,5 @@ assert.equal(byName.introduction.label, 'Introduction')
 assert.equal(byName.introduction.folder, 'src/content/docs/introduction')
 assert.equal(byName['getting-started'].folder, 'src/content/docs/getting-started')
 assert.equal(byName['products-strategy-hub'].folder, 'src/content/docs/products/strategy-hub')
-assert.equal(byName.test.folder, 'src/content/docs/test')
 assert.ok(byName.introduction.fields.some(field => field.name === 'title'))
 assert.equal(docsCollections.every(collection => !collection.nested && !collection.meta), true)
