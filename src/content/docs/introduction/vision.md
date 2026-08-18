@@ -1,6 +1,6 @@
 ---
 template: doc
-title: Vision
+title: Vision updated
 description: AIDOG aims to become the leading on-chain private bank, accessible
   to anyone. version
 sidebar:
