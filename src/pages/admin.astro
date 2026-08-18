@@ -1,16 +1,29 @@
+---
+import { fileURLToPath } from 'node:url'
+import { loadCmsConfig } from '../cms-config.mjs'
+
+const rootDir = fileURLToPath(new URL('../..', import.meta.url))
+const cmsConfig = loadCmsConfig(rootDir)
+---
+
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="robots" content="noindex" />
     <link rel="icon" href="/docs/favicon.png" type="image/png" />
-    <link href="/docs/admin/config.yml" type="text/yaml" rel="cms-config-url" />
     <title>AIDOG Docs CMS</title>
   </head>
   <body>
+    <script is:inline>
+      window.CMS_MANUAL_INIT = true
+    </script>
+    <script is:inline define:vars={{ cmsConfig }}>
+      window.__DECAP_CONFIG__ = cmsConfig
+    </script>
     <script>
-      import CMS from 'decap-cms-app';
-      CMS.init();
+      import CMS from 'decap-cms-app'
+      CMS.init({ config: window.__DECAP_CONFIG__ })
     </script>
   </body>
 </html>

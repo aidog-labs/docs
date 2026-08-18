@@ -58,17 +58,11 @@ export function parseSidebarYaml(text) {
 /**
  * @param {SidebarSection[]} sections
  * @param {string[]} directories
- * @returns {void} throws when yaml and the docs folder disagree
+ * @returns {void} throws when a docs folder is missing from yaml
  */
 export function assertSectionsMatchDirectories(sections, directories) {
   const fromYaml = new Set(sections.map(section => section.directory))
   const fromFs = new Set(directories)
-
-  for (const section of sections) {
-    if (!fromFs.has(section.directory)) {
-      throw new Error(`sidebar.yaml section "${section.label}" points at missing directory "${section.directory}"`)
-    }
-  }
 
   const extras = [...fromFs].filter(directory => !fromYaml.has(directory)).sort()
   if (extras.length > 0) {

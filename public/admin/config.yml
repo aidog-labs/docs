@@ -2,7 +2,7 @@ backend:
   name: github
   repo: aidog-labs/docs
   branch: main
-  base_url: https://aidog.xyz
+  base_url: https://web-dev.aidog.xyz
   auth_endpoint: cms/oauth
   site_domain: aidog-labs.github.io
   use_graphql: true
@@ -82,57 +82,3 @@ collections:
                 name: directory
                 widget: string
 
-  - name: docs
-    label: Docs
-    label_singular: Doc
-    folder: src/content/docs
-    create: true
-    delete: true
-    extension: md
-    format: frontmatter
-    slug: '{{slug}}'
-    editor:
-      preview: true
-    nested:
-      depth: 4
-      summary: '{{title}}'
-      subfolders: false
-    meta:
-      path:
-        widget: string
-        label: Path
-    filter:
-      field: template
-      value: doc
-    fields:
-      - label: Template
-        name: template
-        widget: hidden
-        default: doc
-      - label: Title
-        name: title
-        widget: string
-      - label: Description
-        name: description
-        widget: text
-      - label: Sidebar
-        name: sidebar
-        widget: object
-        collapsed: true
-        fields:
-          - label: Order
-            name: order
-            widget: number
-            value_type: int
-            required: false
-          - label: Label
-            name: label
-            widget: string
-            required: false
-      - label: Draft
-        name: draft
-        widget: boolean
-        default: true
-      - label: Body
-        name: body
-        widget: markdown

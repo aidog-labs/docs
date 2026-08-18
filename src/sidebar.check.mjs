@@ -1,4 +1,5 @@
 import assert from 'node:assert/strict'
+import fs from 'node:fs'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 import {
@@ -33,18 +34,15 @@ assert.throws(
 assert.throws(
   () => assertSectionsMatchDirectories(
     [{ label: 'NFT', directory: 'nft' }],
-    ['introduction'],
-  ),
-  /missing directory "nft"/,
-)
-
-assert.throws(
-  () => assertSectionsMatchDirectories(
-    [{ label: 'NFT', directory: 'nft' }],
     ['nft', 'protocol'],
   ),
   /"protocol" is not listed/,
 )
+
+assert.doesNotThrow(() => assertSectionsMatchDirectories(
+  [{ label: 'NFT', directory: 'nft' }, { label: 'Test', directory: 'test' }],
+  ['nft'],
+))
 
 assert.deepEqual(
   toStarlightSidebar([{ label: 'NFT', directory: 'nft' }]),
@@ -53,7 +51,8 @@ assert.deepEqual(
 
 const rootDir = path.join(fileURLToPath(new URL('.', import.meta.url)), '..')
 const sidebar = loadStarlightSidebar(rootDir)
-assert.equal(sidebar.length, 7)
+const sections = parseSidebarYaml(fs.readFileSync(path.join(rootDir, 'src/data/sidebar.yaml'), 'utf8'))
 assert.equal(sidebar[0].label, 'Introduction')
 assert.equal(sidebar[3].label, '$AIDOG Token')
-assert.equal(sidebar[6].label, 'Security & Risks')
+assert.ok(sidebar.some(section => section.label === 'Security & Risks'))
+assert.equal(sidebar.length, sections.length)
