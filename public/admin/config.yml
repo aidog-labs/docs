@@ -6,6 +6,9 @@ backend:
   auth_endpoint: cms/oauth
   site_domain: aidog-labs.github.io
   use_graphql: true
+  squash_merges: true
+
+publish_mode: editorial_workflow
 
 local_backend: true
 
