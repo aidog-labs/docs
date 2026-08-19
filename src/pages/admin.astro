@@ -12,8 +12,51 @@ const cmsConfig = loadCmsConfig(fileURLToPath(new URL('.', import.meta.url)))
     <meta name="robots" content="noindex" />
     <link rel="icon" href="/docs/favicon.png" type="image/png" />
     <title>AIDOG Docs CMS</title>
+    <style>
+      #cms-deploy-bar {
+        position: fixed;
+        right: 16px;
+        bottom: 16px;
+        z-index: 10000;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 8px;
+        font-family: system-ui, sans-serif;
+      }
+      #cms-deploy {
+        background: #111;
+        color: #fff;
+        border: 0;
+        border-radius: 6px;
+        padding: 10px 14px;
+        font-size: 14px;
+        font-weight: 600;
+        cursor: pointer;
+      }
+      #cms-deploy:disabled {
+        opacity: 0.6;
+        cursor: wait;
+      }
+      #cms-deploy-status {
+        background: #fff;
+        color: #111;
+        padding: 6px 10px;
+        border-radius: 6px;
+        font-size: 12px;
+        box-shadow: 0 2px 8px rgb(0 0 0 / 15%);
+      }
+      #cms-deploy-status[hidden] {
+        display: none;
+      }
+    </style>
   </head>
   <body>
+    <div id="nc-root"></div>
+    <div id="cms-deploy-bar">
+      <div id="cms-deploy-status" hidden role="status" aria-live="polite"></div>
+      <button id="cms-deploy" type="button">Deploy to production</button>
+    </div>
     <script is:inline>
       window.CMS_MANUAL_INIT = true
     </script>
@@ -23,6 +66,71 @@ const cmsConfig = loadCmsConfig(fileURLToPath(new URL('.', import.meta.url)))
     <script>
       import CMS from 'decap-cms-app'
       CMS.init({ config: window.__DECAP_CONFIG__ })
+    </script>
+    <script>
+      function cmsGithubToken() {
+        try {
+          const raw = localStorage.getItem('decap-cms-user')
+          if (!raw) {
+            return null
+          }
+          const user = JSON.parse(raw)
+          return typeof user?.token === 'string' && user.token ? user.token : null
+        } catch {
+          return null
+        }
+      }
+
+      const button = document.getElementById('cms-deploy')
+      const status = document.getElementById('cms-deploy-status')
+      const baseUrl = window.__DECAP_CONFIG__?.backend?.base_url
+
+      function setStatus(message) {
+        if (!status) {
+          return
+        }
+        status.hidden = !message
+        status.textContent = message
+      }
+
+      button?.addEventListener('click', async () => {
+        const token = cmsGithubToken()
+        if (!token) {
+          setStatus('Log in to Decap first')
+          return
+        }
+        if (!baseUrl) {
+          setStatus('CMS backend is not configured')
+          return
+        }
+
+        button.disabled = true
+        setStatus('Deploying…')
+        try {
+          const res = await fetch(`${baseUrl}/cms/deploy`, {
+            method: 'POST',
+            headers: { Authorization: `Bearer ${token}` },
+          })
+          const body = await res.json().catch(() => ({}))
+          if (res.ok) {
+            setStatus('Deploy started')
+            return
+          }
+          if (res.status === 401) {
+            setStatus('Log in to Decap first')
+            return
+          }
+          if (res.status === 403) {
+            setStatus(body.error === 'Forbidden origin' ? 'Forbidden origin' : 'No permission to deploy')
+            return
+          }
+          setStatus(typeof body.error === 'string' ? body.error : 'Failed to start deploy')
+        } catch {
+          setStatus('Failed to start deploy')
+        } finally {
+          button.disabled = false
+        }
+      })
     </script>
   </body>
 </html>
