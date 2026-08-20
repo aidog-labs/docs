@@ -9,5 +9,5 @@ sidebar:
 
 AIDOG smart contracts have been audited. Using the protocol still involves risks you should review before depositing funds.
 
-- [Audits](/docs/security/audits/)
-- [Risk Disclosure](/docs/security/risk-disclosure/)
+- [Audits](/security/audits/)
+- [Risk Disclosure](/security/risk-disclosure/)

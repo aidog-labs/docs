@@ -9,6 +9,6 @@ sidebar:
 
 Connect a wallet on Base, review supported chains, and take the first steps in AIDOG.
 
-- [Connect Wallet](/docs/getting-started/connect-wallet/)
-- [Supported Chains](/docs/getting-started/supported-chains/)
-- [Quick Start Guide](/docs/getting-started/quick-start-guide/)
+- [Connect Wallet](/getting-started/connect-wallet/)
+- [Supported Chains](/getting-started/supported-chains/)
+- [Quick Start Guide](/getting-started/quick-start-guide/)

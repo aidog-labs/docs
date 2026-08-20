@@ -12,7 +12,7 @@ AIDOG currently runs on the Base network.
 1. Click the “Connect Wallet” button in the top right corner.
 2. Choose your preferred wallet (MetaMask, Rabby, Coinbase Wallet, etc.).
 
-![alt](/docs/docs-media/m_字母头像-1-.png 'title')
+![alt](/docs-media/m_字母头像-1-.png 'title')
 
 1. Make sure your wallet is switched to the Base network.
 2. Approve the connection.

@@ -9,7 +9,7 @@ sidebar:
 
 StrategyHub allows anyone to create or follow discretionary crypto investment strategies.
 
-- [Key Features](/docs/products/strategyhub/key-features/)
-- [Creating a Strategy](/docs/products/strategyhub/creating-a-strategy/)
-- [Deposit & Withdraw](/docs/products/strategyhub/deposit-and-withdraw/)
-- [Carry Fee](/docs/products/strategyhub/carry-fee/)
+- [Key Features](/products/strategyhub/key-features/)
+- [Creating a Strategy](/products/strategyhub/creating-a-strategy/)
+- [Deposit & Withdraw](/products/strategyhub/deposit-and-withdraw/)
+- [Carry Fee](/products/strategyhub/carry-fee/)

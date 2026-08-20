@@ -2,22 +2,23 @@ backend:
   name: github
   repo: aidog-labs/docs
   branch: main
-  base_url: https://web-dev.aidog.xyz
+  base_url: https://aidog.xyz
   auth_endpoint: cms/oauth
-  site_domain: aidog-labs.github.io
+  site_domain: docs.aidog.xyz
   use_graphql: true
   squash_merges: true
 
 publish_mode: editorial_workflow
+show_preview_links: false
 
 local_backend: true
 
-site_url: https://aidog-labs.github.io/docs
-display_url: https://aidog-labs.github.io/docs
-logo_url: /docs/favicon.png
+site_url: https://docs.aidog.xyz
+display_url: https://docs.aidog.xyz
+logo_url: /favicon.png
 
 media_folder: public/docs-media
-public_folder: /docs/docs-media
+public_folder: /docs-media
 max_file_size: 2048000
 
 collections:

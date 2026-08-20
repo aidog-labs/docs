@@ -1,15 +1,22 @@
 // @ts-check
+import process from 'node:process'
 import { fileURLToPath } from 'node:url'
 import starlight from '@astrojs/starlight'
 import { defineConfig } from 'astro/config'
+import { rehypePrefixSiteBase } from './src/prefix-base.mjs'
 import { loadStarlightSidebar } from './src/sidebar.mjs'
 
 const rootDir = fileURLToPath(new URL('.', import.meta.url))
+const site = process.env.SITE ?? 'https://docs.aidog.xyz'
+const base = process.env.BASE ?? '/'
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://aidog-labs.github.io',
-  base: '/docs',
+  site,
+  base,
+  markdown: {
+    rehypePlugins: [() => rehypePrefixSiteBase(base)],
+  },
   integrations: [
     starlight({
       title: 'AIDOG',

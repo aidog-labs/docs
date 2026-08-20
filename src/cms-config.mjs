@@ -101,6 +101,56 @@ export function toDocsCollection({ name, label, folder }) {
 }
 
 /**
+ * @param {string} [base]
+ * @returns {string} public path prefix with no trailing slash (`''` at site root)
+ */
+function assetPrefix(base) {
+  if (!base || base === '/') {
+    return ''
+  }
+  return `/${base.replace(/^\/+|\/+$/g, '')}`
+}
+
+/**
+ * @param {Record<string, unknown>} raw
+ * @returns {Record<string, unknown>} config with site_url, assets, and OAuth host applied
+ */
+export function applyCmsDeployUrls(raw) {
+  const config = { ...raw }
+  const backend = config.backend && typeof config.backend === 'object' && !Array.isArray(config.backend)
+    ? { ...config.backend }
+    : {}
+
+  const site = process.env.SITE?.replace(/\/$/, '')
+  const base = process.env.BASE
+  const prefix = assetPrefix(base)
+
+  if (process.env.CMS_SITE_URL || site) {
+    const siteUrl = (process.env.CMS_SITE_URL ?? `${site}${prefix}`).replace(/\/$/, '')
+    config.site_url = siteUrl
+    config.display_url = siteUrl
+    try {
+      backend.site_domain = new URL(siteUrl).host
+    }
+    catch {
+      // ponytail: keep yaml site_domain if CMS_SITE_URL/SITE is not a URL
+    }
+  }
+
+  if (process.env.CMS_OAUTH_BASE_URL) {
+    backend.base_url = process.env.CMS_OAUTH_BASE_URL
+  }
+
+  if (base !== undefined) {
+    config.logo_url = `${prefix}/favicon.png`
+    config.public_folder = `${prefix}/docs-media`
+  }
+
+  config.backend = backend
+  return config
+}
+
+/**
  * @param {string} absDir
  * @returns {boolean} whether the directory tree contains a markdown file
  */
@@ -188,9 +238,9 @@ export function loadCmsConfig(startDir = process.cwd()) {
   }
 
   const sections = parseSidebarYaml(fs.readFileSync(sidebarPath, 'utf8'))
-  return {
+  return applyCmsDeployUrls({
     ...raw,
     load_config_file: false,
     collections: [...raw.collections, ...collectionsFromSidebar(rootDir, sections)],
-  }
+  })
 }

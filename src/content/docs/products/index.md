@@ -9,9 +9,9 @@ sidebar:
 
 AIDOG’s core products cover discretionary strategies, automated yield, borrowing, tokenized equities, Bitcoin cycle allocation, and protocol revenue sharing.
 
-- [StrategyHub](/docs/products/strategyhub/)
-- [YieldMax](/docs/products/yieldmax/)
-- [Borrow](/docs/products/borrow/)
-- [Stocks](/docs/products/stocks/)
-- [CycleVault](/docs/products/cyclevault/)
-- [House Pool](/docs/products/house-pool/)
+- [StrategyHub](/products/strategyhub/)
+- [YieldMax](/products/yieldmax/)
+- [Borrow](/products/borrow/)
+- [Stocks](/products/stocks/)
+- [CycleVault](/products/cyclevault/)
+- [House Pool](/products/house-pool/)

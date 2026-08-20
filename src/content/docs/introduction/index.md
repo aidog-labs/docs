@@ -8,8 +8,8 @@ draft: false
 ---
 AIDOG is an on-chain private banking system. This section covers what AIDOG is and the vision behind it.
 
-* [What is AIDOG](/docs/introduction/what-is-aidog/)
-* [Vision](/docs/introduction/vision/)
+* [What is AIDOG](/introduction/what-is-aidog/)
+* [Vision](/introduction/vision/)
 
 test test 2
 

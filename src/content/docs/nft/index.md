@@ -9,7 +9,7 @@ sidebar:
 
 AIDOG NFTs are limited collectibles (maximum 1,000) with utility inside the ecosystem. This section covers generation, utility, maintenance, and House Pool boosts.
 
-- [How to Mint / Generate](/docs/nft/how-to-mint-generate/)
-- [Utility & Benefits](/docs/nft/utility-and-benefits/)
-- [Maintenance Requirements](/docs/nft/maintenance-requirements/)
-- [Rarity & Boost](/docs/nft/rarity-and-boost/)
+- [How to Mint / Generate](/nft/how-to-mint-generate/)
+- [Utility & Benefits](/nft/utility-and-benefits/)
+- [Maintenance Requirements](/nft/maintenance-requirements/)
+- [Rarity & Boost](/nft/rarity-and-boost/)

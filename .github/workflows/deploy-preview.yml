@@ -1,0 +1,48 @@
+name: Deploy preview
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pages-preview
+  cancel-in-progress: true
+
+env:
+  SITE: https://aidog-labs.github.io
+  BASE: /docs-preview
+  CMS_SITE_URL: https://aidog-labs.github.io/docs-preview
+  CMS_OAUTH_BASE_URL: https://web-dev.aidog.xyz
+  PREVIEW_REPO: aidog-labs/docs-preview
+
+jobs:
+  preview:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+
+      - uses: pnpm/action-setup@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+
+      - name: Install and build
+        run: |
+          pnpm install --frozen-lockfile
+          pnpm build
+
+      - name: Hide preview from search engines
+        run: |
+          printf 'User-agent: *\nDisallow: /\n' > dist/robots.txt
+
+      - name: Deploy to docs-preview
+        env:
+          DOCS_PREVIEW_DEPLOY_TOKEN: ${{ secrets.DOCS_PREVIEW_DEPLOY_TOKEN }}
+        run: bash .github/scripts/deploy-preview.sh
