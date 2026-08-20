@@ -16,7 +16,7 @@ env:
   SITE: https://docs.aidog.xyz
   BASE: /
   CMS_SITE_URL: https://docs.aidog.xyz
-  CMS_OAUTH_BASE_URL: https://aidog.xyz
+  CMS_OAUTH_BASE_URL: https://web-dev.aidog.xyz
 
 jobs:
   build:
