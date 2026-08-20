@@ -42,16 +42,16 @@ Markdown files in `src/content/docs/` become pages. Sidebar groups live in `src/
 
 Local: run `pnpm cms` and `pnpm dev`, then open `http://localhost:4321/admin/`.
 
-Production: `https://docs.aidog.xyz/admin/` (tag or manual deploy). Preview: `https://aidog-labs.github.io/docs-preview/admin/` (every push to `main`). OAuth callback hosts are `https://aidog.xyz/cms/oauth/callback` (production) and `https://web-dev.aidog.xyz/cms/oauth/callback` (preview).
+Production: `https://docs.aidog.xyz/admin/` (tag or manual deploy). Preview: `https://docs-preview.aidog.xyz/admin/` (every push to `main`). OAuth callback hosts are `https://aidog.xyz/cms/oauth/callback` (production) and `https://web-dev.aidog.xyz/cms/oauth/callback` (preview).
 
 ### Deploy
 
 | Environment | Trigger | URL |
 | --- | --- | --- |
-| Preview | Push to `main`, or workflow dispatch | `https://aidog-labs.github.io/docs-preview/` |
+| Preview | Push to `main`, or workflow dispatch | `https://docs-preview.aidog.xyz` |
 | Production | Tag `v*.*.*` matching `v[0-9].[0-9]+.[0-9]+`, or workflow dispatch | `https://docs.aidog.xyz` |
 
-Preview publishes to the private `aidog-labs/docs-preview` GitHub Pages site (default `*.github.io` URL; private Pages cannot use a custom domain). Add repo secret `DOCS_PREVIEW_DEPLOY_TOKEN` with Contents write on that repository. Editors who need to open preview links must have access to `docs-preview`.
+Preview publishes to the public `aidog-labs/docs-preview` GitHub Pages site with custom domain `docs-preview.aidog.xyz` (CNAME to `aidog-labs.github.io`, then Enforce HTTPS). Add repo secret `DOCS_PREVIEW_DEPLOY_TOKEN` with Contents write on that repository. Each preview deploy writes `dist/CNAME` and a `Disallow: /` `robots.txt`.
 
 Production Pages on this repo should use custom domain `docs.aidog.xyz` (CNAME to `aidog-labs.github.io`, then Enforce HTTPS).
 

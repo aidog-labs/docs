@@ -13,9 +13,9 @@ concurrency:
   cancel-in-progress: true
 
 env:
-  SITE: https://aidog-labs.github.io
-  BASE: /docs-preview
-  CMS_SITE_URL: https://aidog-labs.github.io/docs-preview
+  SITE: https://docs-preview.aidog.xyz
+  BASE: /
+  CMS_SITE_URL: https://docs-preview.aidog.xyz
   CMS_OAUTH_BASE_URL: https://web-dev.aidog.xyz
   PREVIEW_REPO: aidog-labs/docs-preview
 
@@ -41,6 +41,9 @@ jobs:
       - name: Hide preview from search engines
         run: |
           printf 'User-agent: *\nDisallow: /\n' > dist/robots.txt
+
+      - name: Custom domain for GitHub Pages
+        run: printf 'docs-preview.aidog.xyz\n' > dist/CNAME
 
       - name: Deploy to docs-preview
         env:

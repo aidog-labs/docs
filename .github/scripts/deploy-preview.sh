@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Deploy ./dist to aidog-labs/docs-preview (gh-pages).
+# Deploy ./dist to aidog-labs/docs-preview (branch: main).
 set -euo pipefail
 
 token="${DOCS_PREVIEW_DEPLOY_TOKEN:-}"
@@ -12,11 +12,11 @@ repo="${PREVIEW_REPO:-aidog-labs/docs-preview}"
 workdir="$(mktemp -d)"
 remote="https://x-access-token:${token}@github.com/${repo}.git"
 
-if git clone --depth 1 --branch gh-pages "$remote" "$workdir"; then
+if git clone --depth 1 --branch main "$remote" "$workdir"; then
   :
 else
   git init "$workdir"
-  git -C "$workdir" checkout -b gh-pages
+  git -C "$workdir" checkout -b main
   git -C "$workdir" remote add origin "$remote"
 fi
 
@@ -34,4 +34,4 @@ if git -C "$workdir" diff --cached --quiet; then
 fi
 
 git -C "$workdir" commit -m "Deploy ${GITHUB_SHA:-local}"
-git -C "$workdir" push origin gh-pages
+git -C "$workdir" push origin main

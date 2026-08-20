@@ -3,7 +3,6 @@ import process from 'node:process'
 import { fileURLToPath } from 'node:url'
 import starlight from '@astrojs/starlight'
 import { defineConfig } from 'astro/config'
-import { rehypePrefixSiteBase } from './src/prefix-base.mjs'
 import { loadStarlightSidebar } from './src/sidebar.mjs'
 
 const rootDir = fileURLToPath(new URL('.', import.meta.url))
@@ -14,9 +13,6 @@ const base = process.env.BASE ?? '/'
 export default defineConfig({
   site,
   base,
-  markdown: {
-    rehypePlugins: [() => rehypePrefixSiteBase(base)],
-  },
   integrations: [
     starlight({
       title: 'AIDOG',

@@ -57,17 +57,17 @@ const previewUrls = applyCmsDeployUrls({
   logo_url: '/favicon.png',
   public_folder: '/docs-media',
 })
-process.env.SITE = 'https://aidog-labs.github.io'
-process.env.BASE = '/docs-preview'
-process.env.CMS_SITE_URL = 'https://aidog-labs.github.io/docs-preview'
+process.env.SITE = 'https://docs-preview.aidog.xyz'
+process.env.BASE = '/'
+process.env.CMS_SITE_URL = 'https://docs-preview.aidog.xyz'
 process.env.CMS_OAUTH_BASE_URL = 'https://web-dev.aidog.xyz'
 const previewConfig = applyCmsDeployUrls(previewUrls)
-assert.equal(previewConfig.site_url, 'https://aidog-labs.github.io/docs-preview')
-assert.equal(previewConfig.display_url, 'https://aidog-labs.github.io/docs-preview')
-assert.equal(previewConfig.logo_url, '/docs-preview/favicon.png')
-assert.equal(previewConfig.public_folder, '/docs-preview/docs-media')
+assert.equal(previewConfig.site_url, 'https://docs-preview.aidog.xyz')
+assert.equal(previewConfig.display_url, 'https://docs-preview.aidog.xyz')
+assert.equal(previewConfig.logo_url, '/favicon.png')
+assert.equal(previewConfig.public_folder, '/docs-media')
 assert.equal(previewConfig.backend.base_url, 'https://web-dev.aidog.xyz')
-assert.equal(previewConfig.backend.site_domain, 'aidog-labs.github.io')
+assert.equal(previewConfig.backend.site_domain, 'docs-preview.aidog.xyz')
 delete process.env.SITE
 delete process.env.BASE
 delete process.env.CMS_SITE_URL

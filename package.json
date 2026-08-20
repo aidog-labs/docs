@@ -14,7 +14,7 @@
     "astro": "astro",
     "lint": "eslint",
     "lint:fix": "eslint --fix",
-    "test": "node src/sidebar.check.mjs && node src/cms-config.check.mjs && node src/prefix-base.check.mjs",
+    "test": "node src/sidebar.check.mjs && node src/cms-config.check.mjs",
     "cms": "decap-server",
     "prepare": "simple-git-hooks"
   },
