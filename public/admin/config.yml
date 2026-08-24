@@ -23,48 +23,6 @@ collections:
     editor:
       preview: false
     files:
-      - label: Homepage
-        name: homepage
-        file: src/content/docs/index.md
-        fields:
-          - label: Template
-            name: template
-            widget: hidden
-            default: splash
-          - label: Title
-            name: title
-            widget: string
-          - label: Description
-            name: description
-            widget: text
-          - label: Hero
-            name: hero
-            widget: object
-            fields:
-              - label: Tagline
-                name: tagline
-                widget: text
-              - label: Actions
-                name: actions
-                widget: list
-                fields:
-                  - label: Text
-                    name: text
-                    widget: string
-                  - label: Link
-                    name: link
-                    widget: string
-                  - label: Icon
-                    name: icon
-                    widget: string
-                    required: false
-                  - label: Variant
-                    name: variant
-                    widget: string
-                    required: false
-          - label: Body
-            name: body
-            widget: markdown
       - label: Sidebar
         name: sidebar
         file: src/data/sidebar.yaml

@@ -13,6 +13,9 @@ const base = process.env.BASE ?? '/'
 export default defineConfig({
   site,
   base,
+  redirects: {
+    '/': '/getting-started/',
+  },
   integrations: [
     starlight({
       title: 'AIDOG',
