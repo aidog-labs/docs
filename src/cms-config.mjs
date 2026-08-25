@@ -94,7 +94,7 @@ export function toDocsCollection({ name, label, folder }) {
     extension: 'md',
     format: 'frontmatter',
     slug: '{{slug}}',
-    editor: { preview: true },
+    editor: { preview: false },
     filter: { field: 'template', value: 'doc' },
     fields: DOCS_FIELDS,
   }
