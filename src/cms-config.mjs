@@ -43,6 +43,7 @@ const DOCS_FIELDS = [
     name: 'sidebar',
     widget: 'object',
     collapsed: true,
+    required: false,
     fields: [
       { label: 'Order', name: 'order', widget: 'number', value_type: 'int', required: false },
       { label: 'Label', name: 'label', widget: 'string', required: false },
