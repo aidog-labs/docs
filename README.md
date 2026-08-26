@@ -46,10 +46,10 @@ Production: `https://docs.aidog.xyz/admin/` (tag or manual deploy). Preview: `ht
 
 ### Deploy
 
-| Environment | Trigger | URL |
-| --- | --- | --- |
-| Preview | Push to `main`, or workflow dispatch | `https://docs-preview.aidog.xyz` |
-| Production | Tag `v*.*.*` matching `v[0-9].[0-9]+.[0-9]+`, or workflow dispatch | `https://docs.aidog.xyz` |
+| Environment | Trigger                                                            | URL                              |
+| ----------- | ------------------------------------------------------------------ | -------------------------------- |
+| Preview     | Push to `main`, or workflow dispatch                               | `https://docs-preview.aidog.xyz` |
+| Production  | Tag `v*.*.*` matching `v[0-9].[0-9]+.[0-9]+`, or workflow dispatch | `https://docs.aidog.xyz`         |
 
 Preview publishes to the public `aidog-labs/docs-preview` GitHub Pages site with custom domain `docs-preview.aidog.xyz` (CNAME to `aidog-labs.github.io`, then Enforce HTTPS). Add repo secret `DOCS_PREVIEW_DEPLOY_TOKEN` with Contents write on that repository. Each preview deploy writes `dist/CNAME` and a `Disallow: /` `robots.txt`.
 
