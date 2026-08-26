@@ -1,7 +1,7 @@
 sections:
   - label: Introduction
     directory: introduction
-  - label: Getting Started
+  - label: Quick Start Guide
     directory: getting-started
   - label: Core Products
     directory: products
