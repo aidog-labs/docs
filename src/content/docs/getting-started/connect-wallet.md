@@ -6,14 +6,27 @@ sidebar:
   order: 2
 draft: false
 ---
-AIDOG currently runs on the Base network.
+This guide will help you get started with AIDOG in a few simple steps. AIDOG is an on-chain private banking system that combines automated yield, discretionary strategies, tokenized assets, and protocol ownership in one place.
 
-1. Click the “Connect Wallet” button in the top right corner.
-2. Choose your preferred wallet (MetaMask, Rabby, Coinbase Wallet, etc.).
+## 1. What You Need Before You Start
 
-![alt](/docs-media/logo.png)
+To use AIDOG, you will need:
 
-1. Make sure your wallet is switched to the Base network.
-2. Approve the connection.
+* A Web3 wallet
+* The wallet connected to the Base network
+* A small amount of ETH on Base to pay for gas
+* USDC on Base if you want to deposit into YieldMax, StrategyHub, or CycleVault
+* $AIDOG if you want to stake in House Pool or maintain NFTs
 
-Once connected, you can interact with all AIDOG products.
+If your funds are on another chain, you will need to bridge them to Base first. For Stocks, some assets are on BNB Chain, so you may also need funds on BSC.
+
+
+
+## 2. Connect Your Wallet
+
+* Open the AIDOG website.
+* Click Connect Wallet in the top-right corner.
+* Select your wallet and approve the connection.
+* Confirm that you are on the Base network.
+
+Once connected, you can access all available products from the main menu.
