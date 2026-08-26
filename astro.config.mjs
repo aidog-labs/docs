@@ -14,7 +14,7 @@ export default defineConfig({
   site,
   base,
   redirects: {
-    '/': '/getting-started/',
+    '/': '/introduction/what-is-aidog/',
   },
   integrations: [
     starlight({

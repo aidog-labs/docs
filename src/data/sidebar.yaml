@@ -2,7 +2,7 @@ sections:
   - label: Introduction
     directory: introduction
   - label: Quick Start Guide
-    directory: getting-started
+    directory: quick-start-guide
   - label: Core Products
     directory: products
   - label: $AIDOG Token
