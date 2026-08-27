@@ -3,7 +3,7 @@ template: doc
 title: Connect Wallet
 description: Connect a wallet on the Base network to use AIDOG.
 sidebar:
-  order: 2
+  order: 1
 draft: false
 ---
 
