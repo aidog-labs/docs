@@ -3,7 +3,7 @@ template: doc
 title: Choose How You Want to Use AIDOG
 description: Connect, acquire $AIDOG or USDC, and explore AIDOG products.
 sidebar:
-  order: 4
+  order: 2
 draft: false
 ---
 
