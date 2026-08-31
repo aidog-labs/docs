@@ -3,7 +3,7 @@ template: doc
 title: StrategyHub
 description: "StrategyHub is a marketplace for actively managed crypto strategies. "
 sidebar:
-  order: 4
+  order: 1
 draft: false
 ---
 ### What it is
