@@ -6,7 +6,6 @@ sidebar:
   order: 2
 draft: false
 ---
-
 AIDOG offers several ways to put your capital to work. You can start with one product, or use several at the same time.
 
 ### If you want simple, automated yield:
@@ -23,7 +22,7 @@ Use CycleVault. Deposit USDC and the system will allocate between cbBTC and USDC
 
 ### If you want to trade tokenized stocks on-chain:
 
-Use Stocks. Swap between USDC, ETH, $AIDOG, and platform-issued stock tokens through smart routing.
+Use Stocks. Swap between USDC, ETH, BNB, and platform-issued stock tokens through smart routing.
 
 ### If you want to share in protocol revenue:
 
