@@ -17,9 +17,7 @@ Important distinction:
 
 * 60% to House Pool
 * 20% to the official operating budget, used to run and maintain the project
-* 20% to the official treasury, reserved for proposals to buy back $AIDOG or NFTs, and for handling uncertain risks
-
-Staking $AIDOG in House Pool also counts toward the balance required to keep AIDOG NFTs active.
+* 20% to the official treasury, reserved for proposals to buy back $AIDOG, and for handling uncertain risks
 
 ### Where system revenue comes from
 
@@ -28,12 +26,7 @@ System revenue is the protocol’s income before the 60 / 20 / 20 split. Current
 * YieldMax: 5% of the interest users earn
 * StrategyHub: the fixed 5% protocol portion of Carry Fee, charged only on profitable withdrawals
 * CycleVault: 10% of profit, charged only on profitable withdrawals
-* NFT marketplace: 2% creator royalty on AIDOG NFT trades
 * Other protocol fees if new products go live later
-
-OpenSea charges a separate 1% marketplace fee on NFT trades. That 1% goes to OpenSea and is not AIDOG system revenue.
-
-Creator carry in StrategyHub is also not system revenue. That portion goes to the strategy creator and is compounded back into the strategy until the strategy is closed.
 
 ### How to use it
 
@@ -71,14 +64,9 @@ The official treasury receives 20% of system revenue. It is not automatically di
 Intended uses:
 
 * proposals to buy back $AIDOG
-* proposals to buy back NFTs
 * reserves for uncertain operational or market risks
 
 Use of treasury funds is intended to be initiated through official proposals, not through ad hoc personal spending.
-
-### NFT relationship
-
-Each AIDOG NFT needs a corresponding $AIDOG balance to stay active. $AIDOG staked in House Pool counts toward that requirement. You do not have to keep an equivalent liquid balance in your wallet if that $AIDOG is already staked in House Pool.
 
 ### Risks and controls
 
