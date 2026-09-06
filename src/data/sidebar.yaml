@@ -7,8 +7,6 @@ sections:
     directory: products
   - label: $AIDOG Token
     directory: token
-  - label: NFT
-    directory: nft
   - label: Protocol Mechanics
     directory: protocol
   - label: Security & Risks
