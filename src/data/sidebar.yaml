@@ -8,6 +8,8 @@ sections:
   - label: $AIDOG Token
     directory: token
   - label: Fees & Revenue
-    directory: Fees & Revenue
+    directory: fees-revenue
   - label: Security & Risks
     directory: security
+  - label: FAQ
+    directory: faq
