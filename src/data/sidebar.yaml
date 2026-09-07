@@ -7,7 +7,7 @@ sections:
     directory: products
   - label: $AIDOG Token
     directory: token
-  - label: Protocol Mechanics
-    directory: protocol
+  - label: Fees & Revenue
+    directory: Fees & Revenue
   - label: Security & Risks
     directory: security
