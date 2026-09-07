@@ -32,7 +32,7 @@ Current utilities include:
 * House Pool staking
   Stake $AIDOG in House Pool to receive a share of House Pool’s income. House Pool receives 60% of system revenue. Your share depends on how much $AIDOG you stake relative to the total pool.
 * Governance
-  $AIDOG can be used as a voting credential for official proposals, including proposals related to treasury use, buybacks, or protocol parameters.
+  $AIDOG can be used as a voting credential for official proposals, including proposals related to protocol parameters.
 * Exchange asset inside AIDOG
   $AIDOG can be swapped against assets such as USDC, ETH, and VIRTUAL on the Token page and on supported DEX pools. 
 * Liquidity provision
@@ -58,6 +58,6 @@ The Token page uses available routing to complete swaps. Users still pay ordinar
 * Smart-contract, market, and liquidity risks apply.
 * Staking in House Pool is not principal-protected.
 * Protocol revenue can decline in quiet markets.
-* Official treasury decisions may not always include buybacks.
+* The 20% buyback-and-burn depends on actual system revenue and does not guarantee a higher token price.
 
 $AIDOG is a utility and ownership token for the AIDOG system. It is not a claim on guaranteed cash yield, and it is not designed as a short-term speculative instrument.
