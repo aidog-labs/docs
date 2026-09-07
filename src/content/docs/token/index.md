@@ -1,7 +1,7 @@
 ---
 template: doc
-title: Overview
-description: Utility, tokenomics, and how to acquire $AIDOG.
+title: $AIDOG Token
+description: $AIDOG is the utility and ownership token of the AIDOG system on Base.
 sidebar:
   order: 1
 draft: false
