@@ -17,7 +17,7 @@ Important distinction:
 
 * 60% to House Pool
 * 20% to the official operating budget, used to run and maintain the project
-* 20% to the official treasury, reserved for proposals to buy back $AIDOG, and for handling uncertain risks
+* 20% used to buy back $AIDOG and burn it
 
 ### Where system revenue comes from
 
@@ -44,7 +44,7 @@ A 1% withdrawal fee is charged. That 1% is distributed to remaining stakers, not
 3. 60% of system revenue is sent to House Pool.
 4. House Pool stakers share that 60% according to their staked $AIDOG.
 5. 20% stays with the official team for operations.
-6. 20% stays in the official treasury for buyback proposals or risk response.
+6. 20% is used to buy $AIDOG and burn it.
 
 When you stake:
 
@@ -57,16 +57,11 @@ When you withdraw $AIDOG from House Pool:
 
 The 1% fee is allocated to remaining House stakers in proportion to their shares.
 
-### Official treasury
+### Buyback and burn
 
-The official treasury receives 20% of system revenue. It is not automatically distributed to House stakers.
+20% of system revenue is used to buy $AIDOG on the market and burn it. Burned tokens are removed from circulating supply and cannot be minted again. Its purpose is to reduce $AIDOG supply as protocol revenue is generated.
 
-Intended uses:
-
-* proposals to buy back $AIDOG
-* reserves for uncertain operational or market risks
-
-Use of treasury funds is intended to be initiated through official proposals, not through ad hoc personal spending.
+Buyback size depends on actual system revenue. 
 
 ### Risks and controls
 
