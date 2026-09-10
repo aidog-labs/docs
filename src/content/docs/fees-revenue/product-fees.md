@@ -1,7 +1,7 @@
 ---
 template: doc
 title: Product Fees
-description: Product Fees
+description: Product Fees.
 sidebar:
   order: 2
 draft: true
