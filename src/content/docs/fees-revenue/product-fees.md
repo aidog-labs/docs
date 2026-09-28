@@ -34,10 +34,6 @@ YieldMax charges 5% of earned interest only. There is no deposit fee, no withdra
 * User yield=Gross interest * 95%
 * Protocol fee=Gross interest * 5%
 
-This 5% is sent entirely to House Pool. It does not enter the 60 / 20 / 20 system-revenue split.
-
-This is because the current YieldMax contract already routes the fee 100% to House Pool. YieldMax is not being redeployed in this update, so that routing cannot be changed unless a new contract is deployed in the future.
-
 ### CycleVault
 
 CycleVault charges 10% of profit only when a user withdraws with a profit. If there is no profit, no performance fee is charged.
