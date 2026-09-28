@@ -29,7 +29,7 @@ What you deposit is what you earn in. Deposit USDC, earn USDC. Deposit ETH, earn
 3. Those pools are on Base and Ethereum.
 4. Yield is harvested and converted back into the original asset.
 5. The new principal continues earning.
-6. A 5% performance fee is taken from yield only and sent to House Pool.
+6. A 5% performance fee is taken from yield only.
 7. You keep 95% of the yield.
 8. When you withdraw, the system prefers to pay you from Base liquidity first, so most withdrawals do not require a cross-chain transfer.
 
