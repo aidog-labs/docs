@@ -68,11 +68,10 @@ This 1% is distributed to remaining House stakers. It is not system revenue, and
 
 The following protocol fees become system revenue and then follow the 60 / 20 / 20 split:
 
+* YieldMax’s 5% of earned interest  
 * StrategyHub’s fixed 5% protocol portion of Carry Fee, charged only on profitable withdrawals
 * CycleVault’s 10% of profit, charged only on profitable withdrawals
 * Other future protocol fees, unless a specific contract says otherwise
-
-YieldMax’s 5% interest fee is not included here.
 
 System revenue is split:
 
@@ -86,8 +85,10 @@ Example 1: YieldMax
 A user earns 100 USDC in interest.  
 
 * User keeps 95 USDC
-* 5 USDC goes 100% to House Pool
-* None of this 5 USDC is split into operations or buyback-and-burn
+* 5 USDC becomes system revenue  
+* House Pool receives 3 USDC 
+* Operations receive 1 USDC  
+* 1 USDC is used to buy and burn $AIDOG
 
 Example 2: StrategyHub
 A user withdraws with 1,000 USDC profit. The strategy’s displayed carry is 15%.  
