@@ -15,8 +15,6 @@ draft: false
 * Your funds will begin earning yield automatically.
 * You can withdraw at any time.
 
-YieldMax charges a 5% fee only on the yield you earn. This fee goes to House Pool.
-
 ### StrategyHub
 
 To follow a strategy:
@@ -66,7 +64,7 @@ Note: Stocks assets are on BNB Chain. If you do not have funds on BSC, you will 
 * You will begin receiving a share of protocol revenue.
 * You can withdraw at any time. A 1% withdrawal fee is distributed to remaining stakers.
 
-###  Important Notes
+### Important Notes
 
 * AIDOG products involve market risk, smart contract risk, and potential loss of capital.
 * Past performance does not guarantee future results.
