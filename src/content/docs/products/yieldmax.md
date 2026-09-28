@@ -65,11 +65,13 @@ Pools must also pass whitelist checks, including a history of safe operation and
 
 ### Fees
 
+YieldMax charges 5% of earned interest only. There is no deposit fee, no withdrawal fee, and no lock-up.
+
 User yield=Gross interest×95%
 
-House Pool fee=Gross interest×5%
+Protocol fee=Gross interest×5%
 
-No deposit fee. No withdrawal fee. No lock-up.
+This 5% becomes system revenue and is then split 60% to House Pool, 20% to operations, and 20% to buy back and burn $AIDOG.
 
 ### Risk controls
 
