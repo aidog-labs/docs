@@ -50,13 +50,7 @@ What does House Pool do?
 House Pool is the ownership layer. Users stake $AIDOG and receive a share of House income.
 
 Does House Pool receive 100% of AIDOG income?
-No. House Pool currently receives income from two paths:
-
-1. YieldMax’s 5% interest fee, which goes 100% to House Pool under the current contract
-2. 60% of system revenue from other protocol fees, such as StrategyHub’s 5% protocol carry and CycleVault’s 10% profit fee
-
-Why is YieldMax treated differently?
-The current YieldMax contract already sends its 5% fee entirely to House Pool. YieldMax is not being redeployed in this update, so that route cannot be changed unless a new contract is issued later.
+No. House Pool receives 60% of system revenue. System revenue currently includes YieldMax’s 5% interest fee, StrategyHub’s 5% protocol carry, and CycleVault’s 10% profit fee.
 
 Is there a withdrawal fee?
 Yes. Withdrawing $AIDOG from House Pool costs 1%. That 1% goes to remaining stakers, not to the team and not into the 60 / 20 / 20 split.
@@ -98,9 +92,6 @@ No. You can withdraw at any time.
 
 What is the fee?
 5% of earned interest. Users keep 95%.
-
-Does that 5% follow the 60 / 20 / 20 system split?
-No. Under the current YieldMax contract, the 5% goes 100% to House Pool.
 
 Can the rate fall after I deposit?
 Yes. The system tries to keep the blended yield high, but lending rates move, and adding too much capital to one pool can push its rate down.
@@ -147,11 +138,10 @@ How is system revenue split?
 60% to House Pool, 20% to operations, 20% to buy back $AIDOG and burn it.
 
 Which fees enter that split?
-Currently: StrategyHub’s 5% protocol carry and CycleVault’s 10% profit fee. Future protocol fees may also enter this split unless a specific contract says otherwise.
+Currently: YieldMax’s 5% interest fee, StrategyHub’s 5% protocol carry, and CycleVault’s 10% profit fee. Future protocol fees may also enter this split unless a specific contract says otherwise.
 
 Which fees do not enter that split?  
 
-* YieldMax’s 5% interest fee, which goes 100% to House Pool
 * StrategyHub creator carry
 * House Pool’s 1% withdrawal fee
 * gas and slippage
