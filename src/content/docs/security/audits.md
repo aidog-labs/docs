@@ -48,7 +48,7 @@ Controls currently designed into the product:
 * a Base reserve is kept so withdrawals can usually be paid without a cross-chain transfer
 * user funds are accessed through wallet approval and contracts, not a custodial account
 
-YieldMax charges 5% of earned interest only. Under the current contract, that 5% goes 100% to House.
+YieldMax charges 5% of earned interest only. This 5% becomes system revenue and is split 60 / 20 / 20.
 
 ### CycleVault
 
